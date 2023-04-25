@@ -47,6 +47,7 @@ provider "aws" {
 resource "aws_instance" "myFirstInstance" {
   ami           = var.ami_id
   key_name = var.key_name
+  aws_vpc = var.aws_vpc
   instance_type = var.instance_type
   #security_groups= [var.security_group]
   security_groups= [var.security_group2]

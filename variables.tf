@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "key_name" {
   description = " SSH keys to connect to ec2 instance"
-  default     =  "ansible"
+  default     =  "cicd"
 }
 
 variable "instance_type" {
@@ -17,10 +17,7 @@ variable "security_group" {
   description = "Name of security group"
   default     = "my-jenkins-security-group"
 }
-variable "security_group2" {
-  description = "Name of security group"
-  default     = "launch-wizard-1"
-}
+
 variable "tag_name" {
   description = "Tag Name of for Ec2 instance"
   default     = "my-ec2-instance"
@@ -29,4 +26,8 @@ variable "tag_name" {
 variable "ami_id" {
   description = "AMI for Ubuntu Ec2 instance"
   default     = "ami-0a72af05d27b49ccb"
+}
+variable "aws_vpc" {
+  description = "vpc-sgdev-settrade"
+  default     = "vpc-sgdev-settrade"
 }
