@@ -57,6 +57,13 @@ tags= {
     Name = "my_elastic_ip"
   }
 }
-resource "aws_route53_zone" "newtech-academy" {
-  name = "newtech.academy"
+resource "aws_route53_zone" "set-or-th" {
+  name = "set.or.th"
+}
+resource "aws_route53_record" "www-record" {
+  zone_id = aws_route53_zone.set-or-th.zone_id
+  name    = "www.newtech.set.or.th"
+  type    = "A"
+  ttl     = "300"
+  records = [aws_eip.myFirstInstance]
 }
