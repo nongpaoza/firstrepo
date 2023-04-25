@@ -17,7 +17,10 @@ variable "security_group" {
   description = "Name of security group"
   default     = "my-jenkins-security-group"
 }
-
+variable "security_group2" {
+  description = "Name of security group"
+  default     = "launch-wizard-1"
+}
 variable "tag_name" {
   description = "Tag Name of for Ec2 instance"
   default     = "my-ec2-instance"
