@@ -65,5 +65,5 @@ resource "aws_route53_record" "www-record" {
   name    = "www.set.or.th"
   type    = "A"
   ttl     = "300"
-  records = [aws_eip.myFirstInstance.id]
+  records = [aws_eip.myFirstInstance.public_ip]
 }
