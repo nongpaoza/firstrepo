@@ -52,7 +52,7 @@ resource "aws_instance" "myFirstInstance" {
   #security_groups= [var.security_group2]
   vpc_security_group_ids = ["sg-0283926adc0c8f457"]
   subnet_id = var.subnet_id
-  private_ip = "10.219.68.100"
+  private_ip = "10.219.68.150"
   tags= {
     Name = var.tag_name
   }
