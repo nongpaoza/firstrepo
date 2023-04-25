@@ -2,7 +2,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-#Create route53
+
 
 
 
@@ -43,7 +43,8 @@ resource "aws_instance" "myFirstInstance" {
   ami           = var.ami_id
   key_name = var.key_name
   instance_type = var.instance_type
-  security_groups= [var.security_group]
+  #security_groups= [var.security_group]
+  security_groups= ["	launch-wizard-1"]
   tags= {
     Name = var.tag_name
   }
@@ -57,6 +58,9 @@ tags= {
     Name = "my_elastic_ip"
   }
 }
+
+
+#Create route53
 resource "aws_route53_zone" "set-or-th" {
   name = "set.or.th"
 }
