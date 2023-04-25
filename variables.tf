@@ -19,7 +19,7 @@ variable "security_group" {
 }
 variable "security_group2" {
   description = "Name of security group"
-  default     = "launch-wizard-1"
+  default     = "secgrp-sg-dev-stt-front"
 }
 variable "tag_name" {
   description = "Tag Name of for Ec2 instance"
