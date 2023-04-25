@@ -19,7 +19,7 @@ variable "security_group" {
 }
 variable "security_group2" {
   description = "Name of security group"
-  default     = "secgrp-sg-dev-stt-front"
+  default     = "launch-wizard-1"
 }
 variable "tag_name" {
   description = "Tag Name of for Ec2 instance"
@@ -33,4 +33,12 @@ variable "ami_id" {
 variable "aws_vpc" {
   description = "vpc-sgdev-settrade"
   default     = "vpc-sgdev-settrade"
+}
+variable "vpc_id" {
+  description = "vpc-06ee4b6bb2f1af866"
+  default     = "vpc-06ee4b6bb2f1af866"
+}
+variable "subnet_id" {
+  description = "subnet-0ef38970acae858f0"
+  default     = "subnet-0ef38970acae858f0"
 }
