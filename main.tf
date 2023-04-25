@@ -62,8 +62,8 @@ resource "aws_route53_zone" "set-or-th" {
 }
 resource "aws_route53_record" "www-record" {
   zone_id = aws_route53_zone.set-or-th.zone_id
-  name    = "www.newtech.set.or.th"
+  name    = "www.set.or.th"
   type    = "A"
   ttl     = "300"
-  records = [aws_eip.myFirstInstance]
+  records = [aws_eip.myFirstInstance.id]
 }
