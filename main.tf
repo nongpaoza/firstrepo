@@ -2,9 +2,14 @@ provider "aws" {
   region = var.aws_region
 }
 
-
-
-
+#Create vpc
+resource "aws_vpc" "main" {
+ cidr_block = "10.0.0.0/16"
+ 
+ tags = {
+   Name = "Project VPC"
+ }
+}
 
 #Create security group with firewall rules
 resource "aws_security_group" "my_security_group" {
