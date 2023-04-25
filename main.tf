@@ -2,6 +2,10 @@ provider "aws" {
   region = var.aws_region
 }
 
+#Create route53
+
+
+
 #Create security group with firewall rules
 resource "aws_security_group" "my_security_group" {
   name        = var.security_group
@@ -52,4 +56,7 @@ resource "aws_eip" "myFirstInstance" {
 tags= {
     Name = "my_elastic_ip"
   }
+}
+resource "aws_route53_zone" "newtech-academy" {
+  name = "newtech.academy"
 }
