@@ -42,3 +42,27 @@ variable "subnet_id" {
   description = "subnet-0ef38970acae858f0"
   default     = "subnet-0ef38970acae858f0"
 }
+
+
+
+variable "itppt-lb041" {
+  description = "Tag Name of for Ec2 instance"
+  default     = "itppt-lb041"
+}
+variable "itppt-lb042" {
+  description = "Tag Name of for Ec2 instance"
+  default     = "itppt-lb042"
+}
+variable "itppt-lb043" {
+  description = "Tag Name of for Ec2 instance"
+  default     = "itppt-lb043"
+}
+variable "itppt-lb044" {
+  description = "Tag Name of for Ec2 instance"
+  default     = "itppt-lb044"
+}
+
+variable "private_ip" {
+  description = "Tag Name of for Ec2 instance"
+  default     = "10.219.68.100"
+}
