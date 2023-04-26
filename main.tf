@@ -43,9 +43,24 @@ provider "aws" {
 #  }
 #}
 #Create route53
-resource "aws_route53_zone" "settrade-com" {
+
+
+#resource "aws_route53_zone" "settrade-com" {
+#    name = "settrade.com"
+
+#}
+
+resource "aws_route53_zone" "private" {
   name = "settrade.com"
+
+  vpc {
+    vpc_id = var.vpc_id
+  }
 }
+
+
+
+
 # Create AWS ec2 instance ----------------------------------------------------------------------------1
 resource "aws_instance" "myFirstInstance" {
   ami           = var.ami_id

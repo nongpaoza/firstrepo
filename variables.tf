@@ -35,8 +35,8 @@ variable "aws_vpc" {
   default     = "vpc-sgdev-settrade"
 }
 variable "vpc_id" {
-  description = "vpc-06ee4b6bb2f1af866"
-  default     = "vpc-06ee4b6bb2f1af866"
+  description = "vpc-07d769bb56a108747"
+  default     = "vpc-07d769bb56a108747"
 }
 variable "subnet_id" {
   description = "subnet-0ef38970acae858f0"
