@@ -69,13 +69,14 @@ resource "aws_instance" "myFirstInstance" {
 
 
 #Create route53
-#resource "aws_route53_zone" "set-or-th" {
-#  name = "set.or.th"
-#}
-#resource "aws_route53_record" "www-record" {
-#  zone_id = aws_route53_zone.set-or-th.zone_id
-#  name    = "www.set.or.th"
-#  type    = "A"
-#  ttl     = "300"
-#  records = [aws_eip.myFirstInstance.public_ip]
-#}
+resource "aws_route53_zone" "settrade-com" {
+  name = "settrade.com"
+}
+resource "aws_route53_record" "www-record" {
+  zone_id = aws_route53_zone.settrade-com.zone_id
+  name    = "wen041.settrade.com"
+  type    = "A"
+  ttl     = "300"
+  records = "10.219.68.150"
+ # records = [aws_eip.myFirstInstance.public_ip]
+}
