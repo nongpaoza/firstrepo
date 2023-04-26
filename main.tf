@@ -51,7 +51,7 @@ provider "aws" {
 #}
 
 resource "aws_route53_zone" "private" {
-  name = var.naming
+  name = "settrade.com"
   vpc {
     vpc_id = var.vpc_id
   }
