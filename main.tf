@@ -45,10 +45,10 @@ provider "aws" {
 #Create route53
 
 
-#resource "aws_route53_zone" "settrade-com" {
-#    name = "settrade.com"
+resource "aws_route53_zone" "settrade-com" {
+    name = "settrade.com"
 
-#}
+}
 
 #resource "aws_route53_zone" "private" {
 #  name = "settrade.com"
