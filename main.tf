@@ -108,9 +108,78 @@ tags= {
 
 resource "aws_route53_record" "www-record2" {
   zone_id = aws_route53_zone.settrade-com.zone_id
-  name    = "wen041.settrade.com"
+  name    = "wen042.settrade.com"
   type    = "A"
   ttl     = "300"
  # records = "10.219.68.151"
   records = [aws_instance.myFirstInstance2.private_ip]
+}
+
+
+# Create AWS ec2 instance ----------------------------------------------------------------------------3
+resource "aws_instance" "myFirstInstance3" {
+  ami           = var.ami_id
+  key_name = var.key_name
+  instance_type = var.instance_type
+  #security_groups= [var.security_group]
+  #security_groups= [var.security_group2]
+  vpc_security_group_ids = ["sg-0283926adc0c8f457"]
+  subnet_id = var.subnet_id
+  private_ip = "10.219.68.152"
+  tags= {
+    Name = var.itppt-lb043
+  }
+}
+
+# Create Elastic IP address
+resource "aws_eip" "myFirstInstance3" {
+  vpc      = true
+  instance = aws_instance.myFirstInstance3.id
+tags= {
+    Name = "my_elastic_ip"
+  }
+}
+
+
+resource "aws_route53_record" "www-record3" {
+  zone_id = aws_route53_zone.settrade-com.zone_id
+  name    = "wen043.settrade.com"
+  type    = "A"
+  ttl     = "300"
+ # records = "10.219.68.152"
+  records = [aws_instance.myFirstInstance3.private_ip]
+}
+
+# Create AWS ec2 instance ----------------------------------------------------------------------------4
+resource "aws_instance" "myFirstInstance4" {
+  ami           = var.ami_id
+  key_name = var.key_name
+  instance_type = var.instance_type
+  #security_groups= [var.security_group]
+  #security_groups= [var.security_group2]
+  vpc_security_group_ids = ["sg-0283926adc0c8f457"]
+  subnet_id = var.subnet_id
+  private_ip = "10.219.68.153"
+  tags= {
+    Name = var.itppt-lb044
+  }
+}
+
+# Create Elastic IP address
+resource "aws_eip" "myFirstInstance4" {
+  vpc      = true
+  instance = aws_instance.myFirstInstance4.id
+tags= {
+    Name = "my_elastic_ip"
+  }
+}
+
+
+resource "aws_route53_record" "www-record4" {
+  zone_id = aws_route53_zone.settrade-com.zone_id
+  name    = "wen044.settrade.com"
+  type    = "A"
+  ttl     = "300"
+ # records = "10.219.68.153"
+  records = [aws_instance.myFirstInstance4.private_ip]
 }
