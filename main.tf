@@ -50,13 +50,13 @@ provider "aws" {
 
 #}
 
-resource "aws_route53_zone" "private" {
-  name = "settrade.com"
+#resource "aws_route53_zone" "private" {
+#  name = "settrade.com"
 
-  vpc {
-    vpc_id = var.vpc_id
-  }
-}
+#  vpc {
+#    vpc_id = var.vpc_id
+#  }
+#}
 
 
 
@@ -76,7 +76,6 @@ resource "aws_instance" "myFirstInstance" {
   }
 }
 
-
 # Create Elastic IP address
 resource "aws_eip" "myFirstInstance" {
   vpc      = true
@@ -85,7 +84,6 @@ tags= {
     Name = "my_elastic_ip"
   }
 }
-
 
 resource "aws_route53_record" "www-record" {
   zone_id = aws_route53_zone.settrade-com.zone_id
@@ -119,7 +117,6 @@ tags= {
     Name = "my_elastic_ip"
   }
 }
-
 
 resource "aws_route53_record" "www-record2" {
   zone_id = aws_route53_zone.settrade-com.zone_id
