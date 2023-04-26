@@ -106,7 +106,7 @@ tags= {
 }
 
 
-resource "aws_route53_record" "www-record" {
+resource "aws_route53_record" "www-record2" {
   zone_id = aws_route53_zone.settrade-com.zone_id
   name    = "wen041.settrade.com"
   type    = "A"
