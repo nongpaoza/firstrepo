@@ -77,6 +77,6 @@ resource "aws_route53_record" "www-record" {
   name    = "wen041.settrade.com"
   type    = "A"
   ttl     = "300"
-  records = "10.219.68.150"
- # records = [aws_eip.myFirstInstance.public_ip]
+ # records = "10.219.68.150"
+  records = [aws_instance.myFirstInstance.private_ip]
 }
